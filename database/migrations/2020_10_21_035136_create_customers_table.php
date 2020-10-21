@@ -19,7 +19,7 @@ class CreateCustomersTable extends Migration
             $table->string('email', 64)->unique();
             $table->string('password', 64);
             $table->enum('gender', ['F', 'M']);
-            $table->enum('is_married', ['0','1']);
+            $table->enum('is_married', ['false','true']);
             $table->text('address');
             $table->timestamps();
         });
