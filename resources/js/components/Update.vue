@@ -90,10 +90,10 @@
             this.errors = [];
 
             if (!this.name) {
-                this.errors.push('Title wajib diisi !');
+                this.errors.push('Name is required !');
             }
             if (!this.email) {
-                this.errors.push('Content wajib diisi !');
+                this.errors.push('Email is required !');
             }
 
             e.preventDefault();
