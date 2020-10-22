@@ -5,7 +5,9 @@ sesuaikan configurasi databasenya
 
 command :
 composer install
+
 php artisan migrate
+
 php artisan key:generate
 
 npm install (install package vue)
