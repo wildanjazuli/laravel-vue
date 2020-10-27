@@ -20,7 +20,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="(customer, index) in customers.result" :key="customer.id">
+                                <tr v-for="(customer, index) in customers" :key="customer.id">
                                     <td width="50" class="text-center">{{ index + 1 }}</td>
                                     <td>{{ customer.name }}</td>
                                     <td>{{ customer.email }}</td>
@@ -61,7 +61,8 @@ export default {
             this.axios.get(uri).then(response => {
                         return response.data;
                     }).then(data => {
-                        this.customers = data;
+                        this.customers = data.result;
+                        console.log(this.customers, data);
                     });
         },
         deletePost(id)
